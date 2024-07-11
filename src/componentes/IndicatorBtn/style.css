@@ -1,0 +1,14 @@
+.IndicatorBtn {
+    display: inline-flex;
+    flex-direction: row;
+    max-width: 175px;
+    height: 24px;
+    justify-content: space-between;
+    padding: 4px 8px;
+    margin: 5px 10px;
+    border-radius: 2px;
+}
+
+.IndicatorBtn > div {
+    padding: 0 2px;
+}

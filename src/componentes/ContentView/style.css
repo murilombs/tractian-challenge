@@ -1,0 +1,38 @@
+.contentContainer {
+    background-color: #FFFFFF;
+    margin: 10px 5px;
+    padding: 20px 10px;
+}
+
+.contentHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ativosCompany {
+    display: inline-flex;
+}
+
+.ativosCompany > .indicador {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.ativosCompany > .companyName {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.filterContainer > .IndicatorBtn {
+    background-color: #FFFFFF;
+    border: 1px solid #D8DFE6;
+    border-radius: 3px;
+    color: #77818C;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    padding: 5px 15px;
+}
