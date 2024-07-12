@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import { useSelector } from "react-redux";
 import logo from '../../icons/LOGO TRACTIAN.svg';
 import company_icon from '../../icons/companies_icon.svg';
-import IndicatorBtn from "../IndicatorBtn";
+import CompanyBtn from "../CompanyBtn";
 import { bringAllCompanies } from "../../slice";
 import './style.css';
 
@@ -22,7 +22,8 @@ function Header() {
             <div className="btnContainer">
                 {
                 companiesList.length > 0 
-                ? companiesList.map((company, idx) => <IndicatorBtn key={idx} icon={company_icon} propText={company.name}/>)
+                ? companiesList.map((company, idx) => 
+                    <CompanyBtn key={idx} icon={company_icon} companyProp={company} idx={idx}/>)
                 : <div>loading</div>
                 }
             </div>

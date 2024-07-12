@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './style.css';
-import IndicatorBtn from "../IndicatorBtn";
-
-import criticoIcon from '../../icons/critico_icon.svg'
-import energyIcon from '../../icons/energy_icon.svg'
+import { useSelector } from "react-redux";
+// import FilterBtn from "../FilterBtn";
+// import criticoIcon from '../../icons/critico_icon.svg'
+// import energyIcon from '../../icons/energy_icon.svg'
+import { bringSelectCompany } from "../../slice";
 
 function ContentView() {
-    const companyName = "TESTE";
+    const company = useSelector((state) => bringSelectCompany(state))
+    const [companyName, setCompanyName] = useState('')
+
+    useEffect(() => {
+        setCompanyName(company.name);
+    }, [company])
 
     return (
         <div className="contentContainer">
@@ -17,8 +23,8 @@ function ContentView() {
                 </div>
 
                 <div className="filterContainer">
-                    <IndicatorBtn icon={energyIcon} propText={"Sensor de Energia"}/>
-                    <IndicatorBtn icon={criticoIcon} propText={"Crítico"}/>
+                    {/* <FilterBtn icon={energyIcon} propText={"Sensor de Energia"}/>
+                    <FilterBtn icon={criticoIcon} propText={"Crítico"}/> */}
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@ function App() {
     getAllCompanies()
     .then((resp) => {
       dispatchToCompanies(setCompanies(resp));
-      dispatchSetCompany(setcompanyInFocus(resp[0]))
+      dispatchSetCompany(setcompanyInFocus(0))
     });
    });
 

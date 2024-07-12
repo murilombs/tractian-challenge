@@ -23,8 +23,8 @@ export const companieSlice = createSlice({
             state.listOfCompanies = action.payload;
             
         },
-        setcompanyInFocus: (state, action : PayloadAction<ICompany>) => {
-            state.company = action.payload;
+        setcompanyInFocus: (state, action : PayloadAction<number>) => {
+            state.company = state.listOfCompanies[action.payload];
         }
     }
 });
