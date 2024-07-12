@@ -7,6 +7,12 @@
     padding: 4px 8px;
     margin: 5px 10px;
     border-radius: 2px;
+    background-color: #2188FF;
+}
+
+.IndicatorBtn.inactive {
+    background-color: #023B78;
+    cursor: pointer;
 }
 
 .IndicatorBtn > div {
